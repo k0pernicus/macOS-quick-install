@@ -66,7 +66,7 @@ echo '>> Installing music/video apps'
 brew cask install vlc spotify
 
 echo '>> Installing dev applications'
-brew cask install iterm2 transmit visual-studio-code python
+brew cask install iterm2 transmit visual-studio-code python rustup-init
 install "Xcode"
 
 echo '>> Installing communication applications'
