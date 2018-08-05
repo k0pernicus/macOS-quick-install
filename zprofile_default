@@ -1,0 +1,13 @@
+alias firefox_profiles='/Applications/Firefox.app/Contents/MacOS/firefox-bin -p'
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.nimble/bin:$PATH"
+
+# Pyenv
+export PATH="$HOME/.pyenv:$PATH"
+eval "$(pyenv init -)"
+
+# Go binaries
+export GOPATH="$HOME/Code/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$GOPATH:$GOBIN:$PATH"
