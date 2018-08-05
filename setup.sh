@@ -85,6 +85,11 @@ echo '>> Installing dev applications'
 brew cask install iterm2 go pyenv rustup-init transmit visual-studio-code
 install "Xcode"
 
+echo '>>> Checking/Setting go environment'
+mkdir -p ~/Code
+echo "export GOROOT=$HOME/Code/go" >> ~/.zprofile
+echo "export PATH=$GOROOT/bin:$PATH" >> ~/.zprofile
+
 echo '>> Installing communication applications'
 install "Slack"
 brew cask install discord irssi firefox transmission tunnelblick
