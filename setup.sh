@@ -53,12 +53,17 @@ if [ -e ~/.zshrc ]; then
 fi
 # Create original zprofile file (if exists)
 if [ ! -f ~/.zprofile ]; then
-	touch ~/.zprofile
+	cp ./zprofile_default ~/.zprofile
+else
+	cat ./zprofile_default >> ~/.zprofile
 fi
 # Change default shell
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo ">> Changing the default shell to zsh"
 chsh -s /bin/zsh
+
+# Creating Code folder
+mkdir -p ~/Code/
 
 ## Softwares
 echo '> Installing the softwares'
@@ -84,11 +89,6 @@ brew cask install vlc spotify
 echo '>> Installing dev applications'
 brew cask install iterm2 go pyenv rustup-init transmit visual-studio-code
 install "Xcode"
-
-echo '>>> Checking/Setting go environment'
-mkdir -p ~/Code
-echo "export GOROOT=$HOME/Code/go" >> ~/.zprofile
-echo "export PATH=$GOROOT/bin:$PATH" >> ~/.zprofile
 
 echo '>> Installing communication applications'
 install "Slack"
