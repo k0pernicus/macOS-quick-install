@@ -44,6 +44,22 @@ function install () {
 	fi
 }
 
+# Installing ZSH
+echo "> Installing zsh"
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+# Disabled original zshrc file (if exists)
+if [ -e ~/.zshrc ]; then
+	cp ~/.zshrc ~/.zshrc.orig
+fi
+# Create original zprofile file (if exists)
+if [ ! -f ~/.zprofile ]; then
+	touch ~/.zprofile
+fi
+# Change default shell
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+echo ">> Changing the default shell to zsh"
+chsh -s /bin/zsh
+
 ## Softwares
 echo '> Installing the softwares'
 
