@@ -66,12 +66,12 @@ echo '>> Installing music/video apps'
 brew cask install vlc spotify
 
 echo '>> Installing dev applications'
-brew cask install iterm2 transmit visual-studio-code python rustup-init
+brew cask install iterm2 go pyenv rustup-init transmit visual-studio-code
 install "Xcode"
 
 echo '>> Installing communication applications'
 install "Slack"
-brew cask install discord firefox transmission tunnelblick
+brew cask install discord irssi firefox transmission tunnelblick
 
 echo '>> Installing managers'
 install "1Password"
