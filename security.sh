@@ -99,15 +99,15 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 ## Boot changes
 # Boot is verbose mode rather than macOS GUI mode
-sudo nvram boot-args="-v";ok
+sudo nvram boot-args="-v"
 
 # Disable the start-up chime
-sudo nvram SystemAudioVolume=" ";ok
+sudo nvram SystemAudioVolume=" "
 
 # Disable saving to iCloud (which is the default option)
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false;ok
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Disable automatic sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null;ok
+sudo systemsetup -setcomputersleep Off > /dev/null
 
 echo 'All parameters have been set. Fin'
