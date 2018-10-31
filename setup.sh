@@ -158,36 +158,36 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 
 ## Messages
 # Disable automatic emoji substitution
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false;ok
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
 
 # Disable smart quotes; annoying for dev
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false;ok
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable the auto dash
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false;ok
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Disable continuous spell check
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false;ok
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 # Plain text mode for new TextEdit doc
-defaults write com.apple.TextEdit RichText -int 0;ok
+defaults write com.apple.TextEdit RichText -int 0
 # Always open and save files as UTF-8
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
-defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4;ok
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 ## Activity Monitor
 # Display the main window when launching Activity Monitor
-defaults write com.apple.ActivityMonitor OpenMainWindow -bool true;ok
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
 # Visualize CPU usage in the Activity Monitor Dock icon
-defaults write com.apple.ActivityMonitor IconType -int 5;ok
+defaults write com.apple.ActivityMonitor IconType -int 5
 
 # Show all processes in Activity Monitor
-defaults write com.apple.ActivityMonitor ShowCategory -int 0;ok
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
-defaults write com.apple.ActivityMonitor SortDirection -int 0;ok
+defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 echo 'This script misses:'
 echo '\t * cozy-cloud'
