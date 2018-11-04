@@ -3,7 +3,7 @@ Repo that contains script to automate setting up my macOS machine.
 
 ## Current status and version
 Work in progress.
-Version: 0.4
+Version: 0.5
 
 ## Installation
 
